@@ -7,7 +7,7 @@ from tensorflow.keras.layers import Dense, Flatten
 class AccuracyAtLeast95(tf.keras.callbacks.Callback): # inherit from tf.keras.callbacks.Callback
   def on_epoch_end(self, epoch, logs={}):
     if (logs.get('accuracy')>.95):
-      print('\n☺️ Accuracy above 95%. Training will be stopped now.')
+      print('\n☺️  Accuracy above 95%. Training will be stopped now.')
       self.model.stop_training = True
 
 callbacks = AccuracyAtLeast95()
